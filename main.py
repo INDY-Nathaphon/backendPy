@@ -33,7 +33,7 @@ async def Predic(img):
     # class_name = class_names[index]
     confidence_score= prediction[0][index]
     all_confidence_score =  tuple([float(prediction[0][0]),float(prediction[0][1]),float(prediction[0][2])])
-    return {index,confidence_score,all_confidence_score}
+    return index,confidence_score,all_confidence_score
 
 app = Flask(__name__)
 @app.route('/',methods=['GET','POST'])
